@@ -90,7 +90,7 @@ async def upload(client,message):
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
                         await message.reply_text('**==> Follow Below Format To Upload Link To Your Pdisk Account** \n\n**• title** - `Title Of Your Post` \n**• link** - `Your File Link` \n**• thumb** - `Your Post Thumbnail Link`',reply_to_message_id = message.message_id)
-			return  
+		        return  
 	        try:
 			thumb =  v_[2].split('-')[1].replace(" ","")
 		except:
