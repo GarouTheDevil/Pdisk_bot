@@ -84,7 +84,7 @@ async def upload(client,message):
 			title = v_[0].split('-')[1]
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
-			await message.reply_text('**How To Use**\n\nExample:-\n```title - Sample test \nlink - http://telegramfiles.com/files/10384867/6096083c4f62cba7367b9b6891bafd98/10_Minute_Timer_4ASKMcdCc3g_278.mkv\ntumb - https://tgstream.iamidiotareyoutoo.com/159180/1875203403```\n\n**thumb is optinal you can send titlt and link**',reply_to_message_id = message.message_id)
+			await message.reply_text('**==> Follow Below Formart To Upload Link To Your Pdisk Account** \n**• title** - <i>Title Of Your Post</i> \n**• link** - <i>Your File Link</i> \n**• thumb** - <i>Your Post Thumbnail Link<i> \n**==> For To Generate File Link And Images Links Follow Below Steps** \n• Send Image To Any Telegraph Uploader Bot For Permanent Link \n• Use @DirectLinkGeneratorBot For Instant File To Link Generation Or Use Index Link \n**==> About Speed Of Uploading** \n• Speed If Uploading Is Depends On File Size And Speed Of Link , If Your Using Instant Link Generation Bots Then Speed Of Uploading Will Be Too Slow , It's Better To Use Index Links For Speed Uploading',reply_to_message_id = message.message_id)
 			return
 		try:
 			thumb =  v_[2].split('-')[1].replace(" ","")
@@ -94,7 +94,7 @@ async def upload(client,message):
 			res = pdisk_url(api_key,link,title,thumb)
 			try:
 				id = res['data']['item_id']
-				await message.reply_text(f'Title : {title}\n\nURL : ```https://cofilink.com/share-video?videoid={id}```\n\n**This File Will Be Uploading in  10 - 15 Minutes **',reply_to_message_id = message.message_id)
+				await message.reply_text(f'**• Title** : {title}\n **• URL** : ```https://pdisks.com/share-video?videoid={id}```\n\n**Post Will Be Uploading Within Hour**',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
 				await message.reply_text(f"**Error :** ```{e}```",reply_to_message_id = message.message_id)
