@@ -87,9 +87,9 @@ async def upload(client,message):
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
                         await message.reply_text(
-			    text=Translation.HELP_TEXT,
-                            chat.id=update.chat.id,
-                            reply_to_message_id = message.message_id
+			    text==Translation.HELP_TEXT,
+                            chat.id={update.chat.id,
+                            reply_to_message_id = update.message_id
                         return
                         
 		try:
