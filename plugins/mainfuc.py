@@ -89,7 +89,7 @@ async def upload(client,message):
 			title = v_[0].split('-')[1]
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
-                        await update.reply_text(text=Translation.HELP_TEXT, reply_to_message_id = update.message.id)
+                        await message.reply_text('**==> Follow Below Format To Upload Link To Your Pdisk Account** \n\n**• title** - `Title Of Your Post` \n**• link** - `Your File Link` \n**• thumb** - `Your Post Thumbnail Link`', reply_to_message_id = message.message.id)
                         return
                         
 		try:
@@ -113,5 +113,5 @@ async def upload(client,message):
 				e = res['msg']
 				await message.reply_text(f"**Error** : ```{e}```",reply_to_message_id = message.message_id)
 			
-	else:
+	 else:
 		await message.reply_text("**Connect Your Account Using Command /connect**",reply_to_message_id = message.message_id)
