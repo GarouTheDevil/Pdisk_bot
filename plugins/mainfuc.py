@@ -89,9 +89,9 @@ async def upload(client,message):
 			title = v_[0].split('-')[1]
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
-                        await message.reply_text('**==> Follow Below Format To Upload Link To Your Pdisk Account** \n\n**• title** - `Title Of Your Post` \n**• link** - `Your File Link` \n**• thumb** - `Your Post Thumbnail Link`',reply_to_message_id = message.message_id)
-		        return  
-	        try:
+			await message.reply_text('**==> Follow Below Format To Upload Link To Your Pdisk Account** \n\n**• title** - `Title Of Your Post` \n**• link** - `Your File Link` \n**• thumb** - `Your Post Thumbnail Link`',reply_to_message_id = message.message_id)
+			return
+		try:
 			thumb =  v_[2].split('-')[1].replace(" ","")
 		except:
 			thumb = None
@@ -110,7 +110,7 @@ async def upload(client,message):
 				await message.reply_text(f'**• Title : {title}\n**• URL** : ```https://cofilink.com/share-video?videoid={id}```\n\n**Post Will Be Uploaded With In Hour ',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
-				await message.reply_text(f"**Error** : ```{e}```",reply_to_message_id = message.message_id)
-			
+				await message.reply_text(f"Error:```{e}```",reply_to_message_id = message.message_id)
+
 	else:
 		await message.reply_text("**Connect Your Account Using Command /connect**",reply_to_message_id = message.message_id)
