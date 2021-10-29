@@ -22,7 +22,7 @@ async def help(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton("BACK", callback_data = "start")
+                        InlineKeyboardButton("CLOSE", callback_data = "close")
                 ]
             ]
         )
@@ -51,7 +51,7 @@ async def about(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton("BACK", callback_data = "start")
+                        InlineKeyboardButton("CLOSE", callback_data = "close")
                 ]
             ]
         ),
