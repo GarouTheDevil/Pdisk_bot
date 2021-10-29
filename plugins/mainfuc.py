@@ -88,7 +88,7 @@ async def upload(client,message):
 		except :
                         await message.reply_text(
 			    text==Translation.HELP_TEXT,
-                            chat.id={update.chat.id,
+                            chat.id==update.chat.id,
                             reply_to_message_id = update.message_id
                         return
                         
