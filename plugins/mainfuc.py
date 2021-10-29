@@ -60,9 +60,8 @@ async def get_uptime(client, m: Message):
 @Client.on_message(filters.private & filters.command(['connect']))
 async def connect(client,message):
 	await message.reply_text(
-  'Send Your <a herf="https://www.pdisks.com/use-api">API_KEY</a> From Pdisks.net \n\n**Use This Link** : https://www.pdisks.com/use-api', 
+  'Send Your **API_KEY** From Pdisks.net \n\n**Use This Link** : https://Pdisks.com/use-api', 
   reply_to_message_id=message.message_id, 
-  parse_mode='html', 
   reply_markup=ForceReply(True)
 )
 @Client.on_message(filters.private & filters.reply)
