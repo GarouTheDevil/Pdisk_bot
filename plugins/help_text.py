@@ -32,7 +32,7 @@ async def help(bot, update):
 async def start(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT,
+        text=Translation.START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
