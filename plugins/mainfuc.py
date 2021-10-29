@@ -36,11 +36,11 @@ async def _human_time_duration(seconds):
 @Client.on_message(filters.command("ping"))
 async def ping_pong(client, m: Message):
     start = time()
-    m_reply = await m.reply_text("Pinging...")
+    m_reply = await m.reply_text("**Processing...⏳**")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "🏓 `PONG!!`\n"
-        f"⚡️ `{delta_ping * 1000:.3f} ms`"
+        "**PONG**\n"
+        f"**{delta_ping * 1000:.3f} ms**"
     )
 
 
@@ -50,9 +50,9 @@ async def get_uptime(client, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        "🤖 Bot status:\n"
-        f"• **Uptime:** `{uptime}`\n"
-        f"• **Start time:** `{START_TIME_ISO}`"
+        "**Bot status :**\n"
+        f"**• UpTime :** `{uptime}`\n"
+        f"**• Start Time :** `{START_TIME_ISO}`"
     )   
 
 @Client.on_message(filters.private & filters.command(['connect']))
@@ -68,11 +68,11 @@ async def api_connect(client,message):
             check = res['data']
             insert(message.chat.id)
             set(message.chat.id, API_KEY)
-            await message.reply_text("Your Account Conected Successfully ✅", reply_to_message_id = message.message_id)
+            await message.reply_text("**✓ Your Account Conected Successfully**", reply_to_message_id = message.message_id)
         except Exception as f:
             print(f)
             e = res['msg']
-            await message.reply_text(f"Error: {e}",reply_to_message_id = message.message_id)
+            await message.reply_text(f"**Error :** {e}",reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.private & filters.regex("http|https"))
 async def upload(client,message):
@@ -97,7 +97,7 @@ async def upload(client,message):
 				await message.reply_text(f'Title : {title}\n\nURL : ```https://cofilink.com/share-video?videoid={id}```\n\n**This File Will Be Uploading in  10 - 15 Minutes **',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
-				await message.reply_text(f"Error: ```{e}```",reply_to_message_id = message.message_id)
+				await message.reply_text(f"**Error :** ```{e}```",reply_to_message_id = message.message_id)
 		else:
 			res = pdisk_url(api_key,link,title)
 			try:
@@ -108,4 +108,4 @@ async def upload(client,message):
 				await message.reply_text(f"Error:```{e}```",reply_to_message_id = message.message_id)
 			
 	else:
-		await message.reply_text("Connect Your Account Using Command /connect",reply_to_message_id = message.message_id)
+		await message.reply_text("**Connect Your Account Using Command /connect**",reply_to_message_id = message.message_id)
