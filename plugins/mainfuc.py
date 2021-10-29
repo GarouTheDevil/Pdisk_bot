@@ -89,7 +89,7 @@ async def upload(client,message):
 			title = v_[0].split('-')[1]
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
-                        await message.reply_text(text=Translation.HELP_TEXT, reply_to_message_id = message.message.id)
+                        await update.reply_text(text=Translation.HELP_TEXT, reply_to_message_id = update.message.id)
                         return
                         
 		try:
