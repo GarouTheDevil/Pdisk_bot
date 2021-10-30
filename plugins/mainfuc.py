@@ -95,7 +95,7 @@ async def upload(client,message):
 			cover_url = v_[2].split('-')[1].replace(" ","")
 		except:
 			cover_url = None
-	        if cover_url:
+           if cover_url:
 			res = pdisk_url(api_key,link,title,cover_url)
 			try:
 				id = res['data']['item_id']
