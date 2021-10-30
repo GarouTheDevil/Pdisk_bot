@@ -79,6 +79,8 @@ async def api_connect(client,message):
             e = res['msg']
             await message.reply_text(f"**Error :** {e}",reply_to_message_id = message.message_id)
 
+	       	
+
 @Client.on_message(filters.private & filters.regex("http|https"))
 async def upload(client,message):
 	api_key = find(message.chat.id)
@@ -96,7 +98,7 @@ async def upload(client,message):
 		except:
 			thumb = None
 		if thumb:
-			res = pdisk_url(api_key,link,title,thumb)
+			res = pdisk_url(api_key,link,title,cover_url)
 			try:
 				id = res['data']['item_id']
 				await message.reply_text(f'**• Title** : {title}\n**• URL** : https://cofilink.com/share-video?videoid={id}\n**•thumb** : `{cover_url}`\n\n**Post Will Be Uploaded Within Hour**',reply_to_message_id = message.message_id)
