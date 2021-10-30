@@ -89,7 +89,7 @@ async def upload(client,message):
 			title = v_[0].split('-')[1]
 			link  = v_[1].split('-')[1].replace(" ","")
 		except :
-			await message.reply_text('**==> Follow Below Format To Upload Link To Your Pdisk Account** \n\n**title** - `Title Of Your Post` \n**link** - `Your File Link` \n**thumb** - `Your Post Thumbnail Link`',reply_to_message_id = message.message_id)
+			await message.reply_text('**==> Follow These Steps To Upload Link To Account \n\n**title** - `Title Of Post` \n**link** - `File Link` \n**thumb** - `Post Thumbnail Link` \n\n**Use Cammand** : /help **For More Details**',reply_to_message_id = message.message_id)
 			return
 		try:
 			thumb =  v_[2].split('-')[1].replace(" ","")
@@ -99,7 +99,7 @@ async def upload(client,message):
 			res = pdisk_url(api_key,link,title,thumb)
 			try:
 				id = res['data']['item_id']
-				await message.reply_text(f'**• Title** : {title}\n **• URL** : ```https://pdisks.com/share-video?videoid={id}```\n\n**Post Will Be Uploaded Within Hour**',reply_to_message_id = message.message_id)
+				await message.reply_text(f'**• Title** : {title}\n **• URL** : https://pdisks.com/share-video?videoid={id} \n\n**Post Will Be Uploaded Within Hour**',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
 				await message.reply_text(f"**Error :** ```{e}```",reply_to_message_id = message.message_id)
@@ -107,7 +107,7 @@ async def upload(client,message):
 			res = pdisk_url(api_key,link,title)
 			try:
 				id = res['data']['item_id']
-				await message.reply_text(f'**• Title : {title}\n**• URL** : ```https://cofilink.com/share-video?videoid={id}```\n\n**Post Will Be Uploaded With In Hour ',reply_to_message_id = message.message_id)
+				await message.reply_text(f'**• Title : {title}\n**• URL** : https://cofilink.com/share-video?videoid={id} \n\n**Post Will Be Uploaded With In Hour ',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
 				await message.reply_text(f"Error:```{e}```",reply_to_message_id = message.message_id)
