@@ -87,12 +87,12 @@ async def upload(client,message):
 		v_ = data.split("\n")
 		try:
 			title = v_[0].split('-')[1]
-			link  = v_[1].split('-')[1].replace(" ","")
+			link = v_[1].split('-')[1].replace(" ","")
 		except :
 			await message.reply_text('**==> Follow Below Steps To Upload Link To Account** \n\n**title** - `Title Of Post` \n**link** - `File Link` \n**thumb** - `Post Thumbnail Link` \n\n**Use Cammand** : /help **For More Details**',reply_to_message_id = message.message_id)
 			return
 		try:
-			thumb =  v_[2].split('-')[1].replace(" ","")
+			thumb = v_[2].split('-')[1].replace(" ","")
 		except:
 			thumb = None
 		if thumb:
