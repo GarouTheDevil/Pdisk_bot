@@ -92,12 +92,10 @@ async def upload(client,message):
 			await message.reply_text('**==> Follow Below Steps To Upload Link To Account** \n\n**title** - `Title Of Post` \n**link** - `File Link` \n**thumb** - `Post Thumbnail Link` \n\n**Use Cammand** : /help **For More Details**',reply_to_message_id = message.message_id)
 			return
 		try:
-			cover_url = v_[2].split('-')[1].replace(" ","")
+			thumb =  v_[2].split('-')[1].replace(" ","")
 		except:
-			cover_url = None
-           if cover_url:
-			res = pdisk_url(api_key,link,title,cover_url)
-			try:
+			thumb = None
+		if thumb:
 				id = res['data']['item_id']
 				await message.reply_text(f'**• Title** : {title}\n**• URL** : https://cofilink.com/share-video?videoid={id}\n**•thumb** : `{cover_url}`\n\n**Post Will Be Uploaded Within Hour**',reply_to_message_id = message.message_id)
 			except:
