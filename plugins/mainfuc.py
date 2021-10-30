@@ -101,7 +101,7 @@ async def upload(client,message):
 			res = pdisk_url(api_key,link,title,thumb)
 			try:
 				id = res['data']['item_id']
-				await message.reply_text(f'**• Title** : {title} \n**• URL** : https://cofilink.com/share-video?videoid={id} \n **• thumb** : `{thumb}` \n\n**Post Will Be Uploaded With In Hour**',reply_to_message_id = message.message_id)
+				await message.reply_text(f'**• Title** : {title} \n**• URL** : https://cofilink.com/share-video?videoid={id} \n**• Thumbnail** : `{thumb}` \n\n**Post Will Be Uploaded With In Hour**',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
 				await message.reply_text(f"**Error :** ```{e}```",reply_to_message_id = message.message_id)
@@ -109,7 +109,7 @@ async def upload(client,message):
 			res = pdisk_url(api_key,link,title)
 			try:
 				id = res['data']['item_id']
-				await message.reply_text(f'**• Title** : {title} \n**• URL** : https://cofilink.com/share-video?videoid={id} \n **• thumb** : `{thumb}` \n\n**Post Will Be Uploaded With In Hour**',reply_to_message_id = message.message_id)
+				await message.reply_text(f'**• Title** : {title} \n**• URL** : https://cofilink.com/share-video?videoid={id} \n**• Thumbnail** : `{thumb}` \n\n**Post Will Be Uploaded With In Hour**',reply_to_message_id = message.message_id)
 			except:
 				e = res['msg']
 				await message.reply_text(f"**Error** : ```{e}```",reply_to_message_id = message.message_id)
