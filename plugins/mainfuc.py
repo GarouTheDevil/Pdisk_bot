@@ -91,8 +91,8 @@ async def upload(client,message):
 		except :
 			await message.reply_text('**==> Follow Below Steps To Upload Link To Account** \n\n**title** - `Title Of Post` \n**link** - `File Link` \n**thumb** - `Post Thumbnail Link` \n\n**Use Cammand** : /help **For More Details**',reply_to_message_id = message.message_id)
 			return
-	        try:
-                        cover_url = v_[2].split('_')[1].replace(" ","")
+		try:
+			cover_url = v_[2].split('-')[1].replace(" ","")
 		except:
 			cover_url = None
 		if thumb:
