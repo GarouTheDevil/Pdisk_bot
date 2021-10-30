@@ -98,7 +98,7 @@ async def upload(client,message):
 		except:
 			thumb = None
 		if thumb:
-			res = pdisk_url(api_key,link,title,cover_url)
+			res = pdisk_url(api_key,link,title,thumb)
 			try:
 				id = res['data']['item_id']
 				await message.reply_text(f'**• Title** : {title}\n**• URL** : https://cofilink.com/share-video?videoid={id}\n**•thumb** : `{cover_url}`\n\n**Post Will Be Uploaded Within Hour**',reply_to_message_id = message.message_id)
