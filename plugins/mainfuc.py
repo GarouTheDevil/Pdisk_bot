@@ -62,11 +62,8 @@ async def connect(client,message):
 	await message.reply_text(
   'Send Your **API_KEY** From Pdisks.com \n\n**Use This Link** : https://www.Pdisks.com/use-api', 
   reply_to_message_id=message.message_id, 
-  reply_markup=ForceReply(True),
-  reply_markup=InlineKeyboardMarkup([
-                                    [ InlineKeyboardButton(text="Pdisk API Key Link", url=f"https://www.pdisks.com/use-api")]
-                              ])
-                            )
+  reply_markup=ForceReply(True))
+
 @Client.on_message(filters.private & filters.reply)
 async def api_connect(client,message):
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
