@@ -114,5 +114,7 @@ async def upload(client,message):
 				e = res['msg']
 				await message.reply_text(f"**Error** : ```{e}```",reply_to_message_id = message.message_id)
 
-	                  else: 
-		                await message.reply_text("**Connect Your Account Using Command /connect**",reply_to_message_id = message.message_id)
+	else:
+        await message.reply_text("**Connect Your Account Using Command /connect**",
+        reply_to_message_id = message.message_id
+ )
