@@ -105,7 +105,7 @@ async def upload(client,message):
                                 reply_to_message_id = message.message_id,
                                 reply_markup=InlineKeyboardMarkup([
                                     [ InlineKeyboardButton(text="Pdisk Url Status", url=f"https://www.pdisks.com/home")],
-                                    [ InlineKeyboardButton(text="Uploaded Video Status", url=f"https://cofilink.com/share-video?videoid={id}")]
+                                    [ InlineKeyboardButton(text="Uploaded Video Link", url=f"https://cofilink.com/share-video?videoid={id}")]
                               ])
                             )
 			except:
@@ -119,7 +119,7 @@ async def upload(client,message):
                                 reply_to_message_id = message.message_id,
                                 reply_markup=InlineKeyboardMarkup([
                                     [ InlineKeyboardButton(text="Pdisk Url Status", url=f"https://www.pdisks.com/home")],
-                                    [ InlineKeyboardButton(text="Uploaded Video Status", url=f"https://cofilink.com/share-video?videoid={id}")]
+                                    [ InlineKeyboardButton(text="Uploaded Video Link", url=f"https://cofilink.com/share-video?videoid={id}")]
                               ])
                             )
 			except:
